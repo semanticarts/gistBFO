@@ -1,0 +1,689 @@
+# imports: http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl
+# imports: https://w3id.org/semanticarts/ontology/gistCore13.0.0
+
+@prefix : <https://ontologies.semanticarts.com/gistBFO#> .
+@prefix gist: <https://w3id.org/semanticarts/ontology/gist/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ontologies.semanticarts.com/gistBFO>
+	a owl:Ontology ;
+	owl:imports
+		<http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl> ,
+		<https://w3id.org/semanticarts/ontology/gistCore13.0.0>
+		;
+	owl:versionIRI <https://ontologies.semanticarts.com/gistBFO.0.1.0> ;
+	.
+
+obo:BFO_0000002
+	a owl:Class ;
+	.
+
+obo:BFO_0000004
+	a owl:Class ;
+	.
+
+obo:BFO_0000009
+	a owl:Class ;
+	.
+
+obo:BFO_0000015
+	a owl:Class ;
+	.
+
+obo:BFO_0000018
+	a owl:Class ;
+	.
+
+obo:BFO_0000019
+	a owl:Class ;
+	.
+
+obo:BFO_0000020
+	a owl:Class ;
+	.
+
+obo:BFO_0000026
+	a owl:Class ;
+	.
+
+obo:BFO_0000027
+	a owl:Class ;
+	.
+
+obo:BFO_0000028
+	a owl:Class ;
+	.
+
+obo:BFO_0000030
+	a owl:Class ;
+	.
+
+obo:BFO_0000031
+	a owl:Class ;
+	.
+
+obo:BFO_0000034
+	a owl:Class ;
+	.
+
+obo:BFO_0000040
+	a owl:Class ;
+	.
+
+obo:BFO_0000145
+	a owl:Class ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Account>
+	rdfs:subClassOf obo:BFO_0000145 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Actuator>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000030 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Address>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Agreement>
+	rdfs:subClassOf obo:BFO_0000145 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Area>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/AreaUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Artifact>
+	rdfs:subClassOf obo:BFO_0000002 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Aspect>
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Balance>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/BaseUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Behavior>
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Building>
+	rdfs:subClassOf obo:BFO_0000030 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/BundledCatalogItem>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/CatalogItem>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Category>
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/CoherentProductUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/CoherentRatioUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/CoherentUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Collection>
+	rdfs:subClassOf obo:BFO_0000002 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Commitment>
+	rdfs:subClassOf obo:BFO_0000020 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Component>
+	rdfs:subClassOf obo:BFO_0000004 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ContemporaryEvent>
+	rdfs:subClassOf obo:BFO_0000015 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Content>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ContentExpression>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ContingentEvent>
+	rdfs:subClassOf obo:BFO_0000015 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ContingentObligation>
+	rdfs:subClassOf obo:BFO_0000020 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Contract>
+	rdfs:subClassOf obo:BFO_0000145 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ContractTerm>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ControlledVocabulary>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Controller>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000030 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ControllerType>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Count>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/CountingUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion>
+	rdfs:subClassOf obo:BFO_0000009 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/CountryGovernment>
+	rdfs:subClassOf obo:BFO_0000027 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/CurrencyUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/DataSizeUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/DegreeOfCommitment>
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/DistanceUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Duration>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/DurationUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ElectricCurrent>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ElectricalCurrentUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ElectronicMessageAddress>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/EmailAddress>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Equipment>
+	rdfs:subClassOf obo:BFO_0000030 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/EquipmentType>
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Event>
+	rdfs:subClassOf obo:BFO_0000015 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Extent>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/FormattedContent>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Function>
+	rdfs:subClassOf obo:BFO_0000034 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/GeneralMediaType>
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint>
+	rdfs:subClassOf obo:BFO_0000018 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion>
+	rdfs:subClassOf obo:BFO_0000009 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/GeoRoute>
+	rdfs:subClassOf obo:BFO_0000004 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/GeoSegment>
+	rdfs:subClassOf obo:BFO_0000026 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/GeoVolume>
+	rdfs:subClassOf obo:BFO_0000028 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Goal>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000002 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/GovernedGeoRegion>
+	rdfs:subClassOf obo:BFO_0000009 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization>
+	rdfs:subClassOf obo:BFO_0000027 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Group>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000027 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/HistoricalEvent>
+	rdfs:subClassOf obo:BFO_0000015 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ID>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/InformationQuantity>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Intention>
+	rdfs:subClassOf obo:BFO_0000002 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/IntergovernmentalOrganization>
+	rdfs:subClassOf obo:BFO_0000027 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Landmark>
+	rdfs:subClassOf obo:BFO_0000030 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Language>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/LivingThing>
+	rdfs:subClassOf obo:BFO_0000030 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/LuminousIntensity>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/LuminousIntensityUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Magnitude>
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Mass>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/MassUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/MediaType>
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Medium>
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Message>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/MessageDefinition>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/MolarQuantity>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/MoleUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Monetary>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Network>
+	rdfs:subClassOf obo:BFO_0000002 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/NetworkLink>
+	rdfs:subClassOf obo:BFO_0000002 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode>
+	rdfs:subClassOf obo:BFO_0000002 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Obligation>
+	rdfs:subClassOf obo:BFO_0000145 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Offer>
+	rdfs:subClassOf obo:BFO_0000020 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/OrderedCollection>
+	rdfs:subClassOf obo:BFO_0000002 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember>
+	rdfs:subClassOf obo:BFO_0000023 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Organization>
+	rdfs:subClassOf obo:BFO_0000027 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Percentage>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Permission>
+	rdfs:subClassOf obo:BFO_0000002 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Person>
+	rdfs:subClassOf obo:BFO_0000030 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/PhenomenaType>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/PhysicalActionType>
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/PhysicalEvent>
+	rdfs:subClassOf obo:BFO_0000015 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem>
+	rdfs:subClassOf obo:BFO_0000030 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/PhysicalSubstance>
+	rdfs:subClassOf obo:BFO_0000040 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Place>
+	rdfs:subClassOf obo:BFO_0000004 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/PlannedEvent>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000015 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/PostalAddress>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ProductCategory>
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ProductMagnitude>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ProductSpecification>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ProductUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Project>
+	rdfs:subClassOf obo:BFO_0000015 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/RatioMagnitude>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/RatioUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ReferenceValue>
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/RenderedContent>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Requirement>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Restriction>
+	rdfs:subClassOf obo:BFO_0000002 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ScheduledTask>
+	rdfs:subClassOf obo:BFO_0000015 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/SchemaMetaData>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Sensor>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000030 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/ServiceSpecification>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/SimpleUnitOfMeasure>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Specification>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/StreetAddress>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/SubCountryGovernment>
+	rdfs:subClassOf obo:BFO_0000027 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/System>
+	rdfs:subClassOf obo:BFO_0000002 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Task>
+	rdfs:subClassOf obo:BFO_0000015 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/TaskTemplate>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Taxonomy>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/TelephoneNumber>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Temperature>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/TemperatureUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Template>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/TemporalRelation>
+	rdfs:subClassOf obo:BFO_0000145 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Text>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/TimeInterval>
+	rdfs:subClassOf obo:BFO_0000038 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/TimeZone>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000009 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/TimeZoneStandard>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000002 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Transaction>
+	rdfs:subClassOf obo:BFO_0000015 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/TreatyOrganization>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000027 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure>
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/Volume>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+<https://w3id.org/semanticarts/ns/ontology/gist/VolumeUnit>
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
