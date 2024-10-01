@@ -23,6 +23,10 @@ skos:editorialNote
 	a owl:AnnotationProperty ;
 	.
 
+gist:Agreement
+	rdfs:subClassOf obo:BFO_0000145 ;
+	.
+
 gist:Aspect
 	rdfs:subClassOf obo:BFO_0000034 ;
 	skos:editorialNote "BFO Alignment: Function in BFO covers a lot of ground, but it could cover our aspects which are specific to measurements."^^xsd:string ;
@@ -44,8 +48,7 @@ gist:Collection
 	.
 
 gist:Commitment
-	rdfs:subClassOf obo:BFO_0000003 ;
-	skos:editorialNote "BFO Alignment: Commitments occur in time because there is a point at which a thing becomes a commitment and a duration over which a party acts to meet the commitment."^^xsd:string ;
+	rdfs:subClassOf obo:BFO_0000002 ;
 	.
 
 gist:Component
@@ -98,7 +101,7 @@ gist:IntellectualProperty
 	.
 
 gist:Intention
-	rdfs:subClassOf obo:BFO_0000003 ;
+	rdfs:subClassOf obo:BFO_0000002 ;
 	.
 
 gist:Language
@@ -122,6 +125,10 @@ gist:NetworkLink
 gist:NetworkNode
 	rdfs:subClassOf obo:BFO_0000024 ;
 	skos:editorialNote "BFO Alignment: Network node also fits the fiat object part as the node could be virtual or instantiated."^^xsd:string ;
+	.
+
+gist:Obligation
+	rdfs:subClassOf obo:BFO_0000145 ;
 	.
 
 gist:OrderedMember
@@ -148,6 +155,10 @@ gist:PhysicalSubstance
 	.
 
 gist:SchemaMetaData
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+gist:Specification
 	rdfs:subClassOf obo:BFO_0000031 ;
 	.
 
