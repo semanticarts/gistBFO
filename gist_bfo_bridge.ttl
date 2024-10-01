@@ -94,7 +94,7 @@ gist:IntellectualProperty
 			obo:BFO_0000031
 		)
 	] ;
-	skos:editorialNote "Intellectual property includes both immaterial knowledge and physically represented knowledge."^^xsd:string ;
+	skos:editorialNote "BFO Alignment: Intellectual property includes both immaterial knowledge and physically represented knowledge."^^xsd:string ;
 	.
 
 gist:Intention
