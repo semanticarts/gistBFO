@@ -91,12 +91,7 @@ gist:GeoVolume
 	.
 
 gist:IntellectualProperty
-	rdfs:subClassOf [
-		owl:unionOf (
-			obo:BFO_0000141
-			obo:BFO_0000031
-		)
-	] ;
+	rdfs:subClassOf obo:BFO_0000002 ;
 	skos:editorialNote "BFO Alignment: Intellectual property includes both immaterial knowledge and physically represented knowledge."^^xsd:string ;
 	.
 
@@ -142,15 +137,12 @@ gist:Organization
 	.
 
 gist:PhysicalIdentifiableItem
-	rdfs:subClassOf obo:BFO_0000004, [ owl:complementOf obo:BFO_0000006 ]   ;
+	rdfs:subClassOf obo:BFO_0000004 ;
+	skos:editorialNote "BFO Alignment: A physical identifiable item is a independent continuant that is not a spatial region."^^xsd:string ;
 	.
 
 gist:PhysicalSubstance
-	rdfs:subClassOf
-		obo:BFO_0000040 ,
-		[ owl:complementOf obo:BFO_0000030 ] ,
-		[ owl:complementOf obo:BFO_0000027 ]
-		;
+	rdfs:subClassOf obo:BFO_0000040 ;
 	skos:editorialNote "BFO Alignment: Physical substance is a material entity, but not an object or aggregate as those are physical identifiable items and collections."^^xsd:string ;
 	.
 
