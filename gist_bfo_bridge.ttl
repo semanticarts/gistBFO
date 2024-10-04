@@ -170,7 +170,7 @@ gist:Organization
 
 gist:PhysicalIdentifiableItem
 	rdfs:subClassOf obo:BFO_0000004 ;
-	skos:editorialNote "BFO Alignment: A physical identifiable item is a independent continuant that is not a spatial region."^^xsd:string ;
+	skos:bfoMappingNote "A physical identifiable item is a independent continuant that is not a spatial region."^^xsd:string ;
 	.
 
 gist:PhysicalSubstance
