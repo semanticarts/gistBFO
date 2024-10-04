@@ -1,4 +1,4 @@
-# imports: http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl
+# imports: http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl
 # imports: https://w3id.org/semanticarts/ontology/gistCore13.0.0
 
 @prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
@@ -19,15 +19,40 @@
 	owl:versionIRI <https://ontologies.semanticarts.com/gistBFO.0.1.0> ;
 	.
 
-skos:editorialNote
-	a owl:AnnotationProperty ;
+obo:BFO_0000057
+	rdfs:subPropertyOf gist:hasParticipant ;
 	.
 
-gist:bfoMappingNote
+obo:BFO_0000063
+	rdfs:subPropertyOf gist:precedes ;
+	.
+
+obo:BFO_0000066
+	rdfs:subPropertyOf gist:occursIn ;
+	.
+
+obo:BFO_0000084
+	rdfs:subPropertyOf gist:isBasedOn ;
+	.
+
+obo:BFO_0000129
+	rdfs:subPropertyOf gist:isMemberOf ;
+	.
+
+obo:BFO_0000132
+	rdfs:subPropertyOf gist:isPartOf ;
+	.
+
+obo:BFO_0000176
+	rdfs:subPropertyOf gist:isPartOf ;
+	.
+
+obo:BFO_0000194
+	rdfs:subPropertyOf gist:isCategorizedBy ;
+	.
+
+skos:editorialNote
 	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf skos:editorialNote ;
-	skos:definition "Information regarding the mapping between gist and BFO ontologies, how a resource was mapped, or clarifcations on the mapping."^^xsd:string ;
-	skos:prefLabel "BFO mapping note"^^xsd:string ;
 	.
 
 gist:Agreement
@@ -182,34 +207,10 @@ gist:UnitOfMeasure
 	gist:bfoMappingNote "Unclear if unit of measure fits in BFO. To avoid potentially inconsistent ontologies, it is initially not mapped to BFO."^^xsd:string ;
 	.
 
-obo:BFO_0000084
-	rdfs:subPropertyOf gist:isBasedOn ;
+gist:bfoMappingNote
+	a owl:AnnotationProperty ;
+	rdfs:subPropertyOf skos:editorialNote ;
+	skos:definition "Information regarding the mapping between gist and BFO ontologies, how a resource was mapped, or clarifcations on the mapping."^^xsd:string ;
+	skos:prefLabel "BFO mapping note"^^xsd:string ;
 	.
 
-obo:BFO_0000129
-	rdfs:subPropertyOf gist:isMemberOf ;
-	.
-
-obo:BFO_0000176
-	rdfs:subPropertyOf gist:isPartOf ;
-	.
-
-obo:BFO_0000132
-	rdfs:subPropertyOf gist:isPartOf ;
-	.
-
-obo:BFO_0000194
-	rdfs:subPropertyOf gist:isCategorizedBy ;
-	.
-
-obo:BFO_0000063
-	rdfs:subPropertyOf gist:precedes ;
-	.
-
-obo:BFO_0000066
-	rdfs:subPropertyOf gist:occursIn ;
-	.
-
-obo:BFO_0000057
-	rdfs:subPropertyOf gist:hasParticipant ;
-	.
