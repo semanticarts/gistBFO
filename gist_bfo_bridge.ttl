@@ -23,29 +23,39 @@ skos:editorialNote
 	a owl:AnnotationProperty ;
 	.
 
+gist:bfoMappingNote
+	a owl:AnnotationProperty ;
+	rdfs:subPropertyOf skos:editorialNote ;
+	skos:definition "Information regarding the mapping between gist and BFO ontologies, how a resource was mapped, or clarifcations on the mapping."^^xsd:string ;
+	skos:prefLabel "BFO mapping note"^^xsd:string ;
+	.
+
+gist:Agreement
+	rdfs:subClassOf obo:BFO_0000145 ;
+	.
+
 gist:Aspect
 	rdfs:subClassOf obo:BFO_0000034 ;
-	skos:editorialNote "BFO Alignment: Function in BFO covers a lot of ground, but it could cover our aspects which are specific to measurements."^^xsd:string ;
+	gist:bfoMappingNote "Function in BFO covers a lot of ground, but it could cover our aspects which are specific to measurements."^^xsd:string ;
 	.
 
 gist:Building
 	rdfs:subClassOf obo:BFO_0000030 ;
-	skos:editorialNote "BFO Alignment: Building is clearly a material entity. Initial mapping will map to the 'object' subclass."^^xsd:string ;
+	gist:bfoMappingNote "Building is clearly a material entity. Initial mapping will map to the objects subclass."^^xsd:string ;
 	.
 
 gist:Category
 	rdfs:subClassOf obo:BFO_0000020 ;
-	skos:editorialNote "BFO Alignment: BFO does not seem to have categories, maybe because everything in BFO is a category."^^xsd:string ;
+	gist:bfoMappingNote "BFO does not seem to have categories, maybe because everything in BFO is a category."^^xsd:string ;
 	.
 
 gist:Collection
 	rdfs:subClassOf obo:BFO_0000002 ;
-	skos:editorialNote "BFO Alignment: Because gist collections could be anything and BFO 'object aggregate' is for physical items, collection maps to a superclass."^^xsd:string ;
+	gist:bfoMappingNote "Because gist collections could be anything and BFO 'object aggregate' is for physical items, collection maps to a superclass."^^xsd:string ;
 	.
 
 gist:Commitment
-	rdfs:subClassOf obo:BFO_0000003 ;
-	skos:editorialNote "BFO Alignment: Commitments occur in time because there is a point at which a thing becomes a commitment and a duration over which a party acts to meet the commitment."^^xsd:string ;
+	rdfs:subClassOf obo:BFO_0000002 ;
 	.
 
 gist:Component
@@ -54,12 +64,12 @@ gist:Component
 
 gist:Content
 	rdfs:subClassOf obo:BFO_0000031 ;
-	skos:editorialNote "BFO Alignment: Content seems to be a proper subset of generically dependent continuant."^^xsd:string ;
+	gist:bfoMappingNote "Content seems to be a proper subset of generically dependent continuant."^^xsd:string ;
 	.
 
 gist:Equipment
 	rdfs:subClassOf obo:BFO_0000030 ;
-	skos:editorialNote "BFO Alignment: Equipment is clearly a material entity. Initial mapping will map to the 'object' subclass."^^xsd:string ;
+	gist:bfoMappingNote "Equipment is clearly a material entity. Initial mapping will map to the object subclass."^^xsd:string ;
 	.
 
 gist:Event
@@ -76,7 +86,7 @@ gist:GeoRegion
 
 gist:GeoRoute
 	rdfs:subClassOf obo:BFO_0000006 ;
-	skos:editorialNote "BFO Alignment: Routes are collections of one dimensional regions, but they may trace out a 2D path."^^xsd:string ;
+	gist:bfoMappingNote "Routes are collections of one dimensional regions, but they may trace out a 2D path."^^xsd:string ;
 	.
 
 gist:GeoSegment
@@ -88,22 +98,17 @@ gist:GeoVolume
 	.
 
 gist:IntellectualProperty
-	rdfs:subClassOf [
-		owl:unionOf (
-			obo:BFO_0000141
-			obo:BFO_0000031
-		)
-	] ;
-	skos:editorialNote "Intellectual property includes both immaterial knowledge and physically represented knowledge."^^xsd:string ;
+	rdfs:subClassOf obo:BFO_0000002 ;
+	gist:bfoMappingNote "Intellectual property includes both immaterial knowledge and physically represented knowledge."^^xsd:string ;
 	.
 
 gist:Intention
-	rdfs:subClassOf obo:BFO_0000003 ;
+	rdfs:subClassOf obo:BFO_0000002 ;
 	.
 
 gist:Language
 	rdfs:subClassOf obo:BFO_0000031 ;
-	skos:editorialNote "BFO Alignment: Language fits the pattern of being continuant because it persists through change, but doesn't have an independent nature."^^xsd:string ;
+	gist:bfoMappingNote "Language fits the pattern of being continuant because it persists through change, but doesn't have an independent nature."^^xsd:string ;
 	.
 
 gist:Magnitude
@@ -116,38 +121,43 @@ gist:Network
 
 gist:NetworkLink
 	rdfs:subClassOf obo:BFO_0000024 ;
-	skos:editorialNote "BFO Alignment: Fiat object part is a pretty good cover for network link."^^xsd:string ;
+	gist:bfoMappingNote "Fiat object part is a pretty good cover for network link."^^xsd:string ;
 	.
 
 gist:NetworkNode
 	rdfs:subClassOf obo:BFO_0000024 ;
-	skos:editorialNote "BFO Alignment: Network node also fits the fiat object part as the node could be virtual or instantiated."^^xsd:string ;
+	gist:bfoMappingNote "Network node also fits the fiat object part as the node could be virtual or instantiated."^^xsd:string ;
+	.
+
+gist:Obligation
+	rdfs:subClassOf obo:BFO_0000145 ;
 	.
 
 gist:OrderedMember
 	rdfs:subClassOf obo:BFO_0000023 ;
-	skos:editorialNote "BFO Alignment: The ordered member defines the role the proxied real world item plays in the ordered collection."^^xsd:string ;
+	gist:bfoMappingNote "The ordered member defines the role the proxied real world item plays in the ordered collection."^^xsd:string ;
 	.
 
 gist:Organization
 	rdfs:subClassOf obo:BFO_0000141 ;
-	skos:editorialNote "BFO Alignment: Organization is clearly an independent continuant and immaterial. May need to update to be consistent with Common Core Ontology as well."^^xsd:string ;
+	gist:bfoMappingNote "Organization is clearly an independent continuant and immaterial. May need to update to be consistent with Common Core Ontology as well."^^xsd:string ;
 	.
 
 gist:PhysicalIdentifiableItem
-	rdfs:subClassOf obo:BFO_0000004, [ owl:complementOf obo:BFO_0000006 ]   ;
+	rdfs:subClassOf obo:BFO_0000004 ;
+	skos:editorialNote "BFO Alignment: A physical identifiable item is a independent continuant that is not a spatial region."^^xsd:string ;
 	.
 
 gist:PhysicalSubstance
-	rdfs:subClassOf
-		obo:BFO_0000040 ,
-		[ owl:complementOf obo:BFO_0000030 ] ,
-		[ owl:complementOf obo:BFO_0000027 ]
-		;
-	skos:editorialNote "BFO Alignment: Physical substance is a material entity, but not an object or aggregate as those are physical identifiable items and collections."^^xsd:string ;
+	rdfs:subClassOf obo:BFO_0000040 ;
+	gist:bfoMappingNote "Physical substance is a material entity, but not an object or aggregate as those are physical identifiable items and collections."^^xsd:string ;
 	.
 
 gist:SchemaMetaData
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+gist:Specification
 	rdfs:subClassOf obo:BFO_0000031 ;
 	.
 
@@ -161,7 +171,7 @@ gist:Template
 
 gist:TemporalRelation
 	rdfs:subClassOf obo:BFO_0000145 ;
-	skos:editorialNote "BFO Alignment: Other potential matches include role and occurrent."^^xsd:string ;
+	gist:bfoMappingNote "Other potential matches include role and occurrent."^^xsd:string ;
 	.
 
 gist:TimeInterval
@@ -169,7 +179,7 @@ gist:TimeInterval
 	.
 
 gist:UnitOfMeasure
-	skos:editorialNote "BFO Alignment: Unclear if unit of measure fits in BFO. To avoid potentially inconsistent ontologies, it is initially not mapped to BFO."^^xsd:string ;
+	gist:bfoMappingNote "Unclear if unit of measure fits in BFO. To avoid potentially inconsistent ontologies, it is initially not mapped to BFO."^^xsd:string ;
 	.
 
 obo:BFO_0000084
