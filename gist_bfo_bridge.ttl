@@ -17,6 +17,9 @@
 		<https://w3id.org/semanticarts/ontology/gistCore13.0.0>
 		;
 	owl:versionIRI <https://ontologies.semanticarts.com/gistBFO.0.1.0> ;
+	skos:definition "A set of bridging axioms between gist and BFO."^^xsd:string ;
+	skos:prefLabel "gist-BFO Bridge"^^xsd:string ;
+	skos:scopeNote "This ontology contains rdfs:subClassOf and rdfs:subPropertyOf assertions to create a bridge between gist and the Basic Formal Ontology (BFO). High-level gist classes are mapped to their most specific superclass in BFO. BFO properties are mapped to core properties in gist."^^xsd:string ;
 	.
 
 obo:BFO_0000057
