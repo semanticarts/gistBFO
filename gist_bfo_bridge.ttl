@@ -20,6 +20,7 @@
 	skos:definition "A set of bridging axioms between gist and BFO."^^xsd:string ;
 	skos:prefLabel "gist-BFO Bridge"^^xsd:string ;
 	skos:scopeNote "This ontology contains rdfs:subClassOf and rdfs:subPropertyOf assertions to create a bridge between gist and the Basic Formal Ontology (BFO). High-level gist classes are mapped to their most specific superclass in BFO. BFO properties are mapped to core properties in gist."^^xsd:string ;
+	gist:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
 	.
 
 obo:BFO_0000057
