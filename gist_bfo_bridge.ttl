@@ -130,7 +130,12 @@ gist:GeoRoute
 	.
 
 gist:GeoSegment
-	rdfs:subClassOf obo:BFO_0000026 ;
+	rdfs:subClassOf [
+		owl:unionOf (
+			obo:BFO_0000026
+			obo:BFO_0000142
+		) ;
+	] ;
 	.
 
 gist:GeoVolume
