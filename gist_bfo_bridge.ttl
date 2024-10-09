@@ -114,7 +114,7 @@ gist:GeoRegion
 	rdfs:subClassOf [
 		owl:unionOf (
 			obo:BFO_0000009
-			obo:BFO_0000029
+			obo:BFO_0000146
 		) ;
 	] ;
 	.
@@ -122,7 +122,7 @@ gist:GeoRegion
 gist:GeoRoute
 	rdfs:subClassOf [
 		owl:unionOf (
-			obo:BFO_0000006
+			obo:BFO_0000009
 			obo:BFO_0000142
 		) ;
 	] ;
@@ -142,6 +142,7 @@ gist:GeoVolume
 	rdfs:subClassOf [
 		owl:unionOf (
 			obo:BFO_0000028
+			obo:BFO_0000029
 			obo:BFO_0000024
 		) ;
 	] ;
