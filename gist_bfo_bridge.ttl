@@ -106,24 +106,50 @@ gist:Event
 	.
 
 gist:GeoPoint
-	rdfs:subClassOf obo:BFO_0000018 ;
+	rdfs:subClassOf [
+		owl:unionOf (
+			obo:BFO_0000018
+			obo:BFO_0000147
+		) ;
+	] ;
 	.
 
 gist:GeoRegion
-	rdfs:subClassOf obo:BFO_0000009 ;
+	rdfs:subClassOf [
+		owl:unionOf (
+			obo:BFO_0000009
+			obo:BFO_0000146
+		) ;
+	] ;
 	.
 
 gist:GeoRoute
-	rdfs:subClassOf obo:BFO_0000006 ;
+	rdfs:subClassOf [
+		owl:unionOf (
+			obo:BFO_0000009
+			obo:BFO_0000142
+		) ;
+	] ;
 	gist:bfoMappingNote "Routes are collections of one dimensional regions, but they may trace out a 2D path."^^xsd:string ;
 	.
 
 gist:GeoSegment
-	rdfs:subClassOf obo:BFO_0000026 ;
+	rdfs:subClassOf [
+		owl:unionOf (
+			obo:BFO_0000026
+			obo:BFO_0000142
+		) ;
+	] ;
 	.
 
 gist:GeoVolume
-	rdfs:subClassOf obo:BFO_0000028 ;
+	rdfs:subClassOf [
+		owl:unionOf (
+			obo:BFO_0000028
+			obo:BFO_0000029
+			obo:BFO_0000024
+		) ;
+	] ;
 	.
 
 gist:IntellectualProperty
