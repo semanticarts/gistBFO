@@ -1,2 +1,2 @@
-# gist-bfo-bridge
-Ontology for connecting gist to BFO
+# gistBFO
+A BFO compatible version of Gist
