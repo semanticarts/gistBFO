@@ -17,7 +17,7 @@ Content
 gistBFO contains:
 
 - ~40 `rdfs:subClassOf` assertions between high-level classes of gist and their most specific superclasses in BFO
-- A core set of `rdfs:subPropertyOf` assertions between properties in gist and properties in BFO
+- A core set of `rdfs:subPropertyOf` assertions between properties in gist and BFO
 
 Annotations are included to provide reasoning behind the assertions.
 
