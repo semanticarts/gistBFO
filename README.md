@@ -21,7 +21,28 @@ gistBFO contains:
 
 Annotations are included to provide reasoning behind the assertions.
 
-gistBFO imports gist and BFO.
+Import Structure
+---
+
+gistBFO imports gist and BFO. gistBFO itself can then be imported into a client-specific ontology.
+
+```mermaid
+graph BT
+    CSO[Client-Specific Ontology]
+    GBFO[gistBFO]
+    GCORE[gistCore]
+    BFO[BFO]
+
+    CSO -->|imports| GBFO
+    GBFO -->|imports| GCORE
+    GBFO -->|imports| BFO
+    CSO -.->|optionally imports| GCORE
+
+    style CSO fill:#4A235A,stroke:#B39DDB,stroke-width:2px,color:#fff
+    style GBFO fill:#1A237E,stroke:#B39DDB,stroke-width:2px,color:#fff
+    style GCORE fill:#263238,stroke:#B39DDB,stroke-width:2px,color:#fff
+    style BFO fill:#263238,stroke:#B39DDB,stroke-width:2px,color:#fff
+```
 
 <br>
 
@@ -34,6 +55,8 @@ In creating gistBFO, we have attempted to balance a number of things:
 2. **Logical Consistency:** The mapping does not generate any logical inconsistencies or contain unsatisfiable classes.
 3. **Respecting the Spirit of gist and BFO:** Even if the mappings are logically consistent, they should meet a higher bar of respecting the spirit of the concepts in gist and BFO. This requires an understanding of the intent behind the definitions, much of which is contained in the ontologies' annotations.
 4. **Anticipation of Alignment with CCO:** In some cases, if a gist class has a counterpart in the Common Core Ontologies (CCO) and that counterpart is aligned to a certain BFO class, then we considered placing the gist class under that BFO class as well. (See, e.g., `gist:Organization`.)
+
+For more background, read our [whitepaper](https://www.semanticarts.com/wp-content/uploads/2025/01/20241024-BFO-and-gist-Article.pdf).
 
 <br>
 
