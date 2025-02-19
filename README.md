@@ -32,14 +32,14 @@ In creating gistBFO, we have attempted to balance a number of things:
 
 1. **Genuine Compliance with BFO:** This would not be an interesting or useful mapping if all gist classes were mapped to BFO's top-level class 'entity'. For this reason, we have tried to map top-level gist classes with their most specific possible superclass in BFO.
 2. **Logical Consistency:** The mapping does not generate any logical inconsistencies or contain unsatisfiable classes.
-3. **Respecting the Spirit of gist and BFO:** Even if the mappings are logically consistent, they should meet a higher bar of respecting the spirit of ideas behind the concepts in gist and BFO. This requires an understanding of the intent behind the definitions, much of which is contained in the ontologies' annotations.
-4. **Anticipation of Alignment with CCO:** In some cases, if a gist class has a counterpart in the Common Core Ontologies (CCO), and that counterpart is aligned to a certain BFO class, then we considered placing the gist class under that BFO class as well. (See, e.g., `gist:Organization`.)
+3. **Respecting the Spirit of gist and BFO:** Even if the mappings are logically consistent, they should meet a higher bar of respecting the spirit of the concepts in gist and BFO. This requires an understanding of the intent behind the definitions, much of which is contained in the ontologies' annotations.
+4. **Anticipation of Alignment with CCO:** In some cases, if a gist class has a counterpart in the Common Core Ontologies (CCO) and that counterpart is aligned to a certain BFO class, then we considered placing the gist class under that BFO class as well. (See, e.g., `gist:Organization`.)
 
 <br>
 
 Contributing
 ---
 
-As of February 2025, gistBFO is in active development. We hope to refine the mappings over time in accordance with the methodological considerations above; and so we invite feedback and suggestions in the form of GitHub issues.
+As of February 2025, gistBFO is in active development. We hope to refine the mappings over time in accordance with the methodological considerations above. We invite feedback and suggestions in the form of GitHub issues.
 
 
