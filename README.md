@@ -7,7 +7,7 @@ gistBFO
 
 gistBFO is a version of [gist](https://github.com/semanticarts/gist) that is compatible with the [Basic Formal Ontology (BFO)](https://github.com/BFO-ontology/BFO-2020).
 
-With gistBFO, you can all the benefits of ontology development with gist while maintaining BFO-compliance.
+With gistBFO, you can get all the benefits of ontology development with gist while maintaining BFO-compliance.
 
 
 
