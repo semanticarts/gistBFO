@@ -10,7 +10,6 @@ gistBFO is a version of [gist](https://github.com/semanticarts/gist) that is com
 With gistBFO, you can get all the benefits of ontology development with gist while maintaining BFO-compliance.
 
 
-
 Content
 ---
 
@@ -20,6 +19,8 @@ gistBFO contains:
 - A core set of `rdfs:subPropertyOf` assertions between properties in gist and BFO
 
 Annotations are included to provide reasoning behind the assertions.
+
+<br>
 
 Import Structure
 ---
