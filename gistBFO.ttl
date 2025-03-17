@@ -1,6 +1,7 @@
 # imports: http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl
 # imports: https://w3id.org/semanticarts/ontology/gistCore13.0.0
 
+@prefix : <https://w3id.org/semanticarts/ontology/gistBFO#> .
 @prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -55,6 +56,10 @@ obo:BFO_0000194
 	rdfs:subPropertyOf gist:isCategorizedBy ;
 	.
 
+skos:bfoMappingNote
+	a owl:AnnotationProperty ;
+	.
+
 skos:editorialNote
 	a owl:AnnotationProperty ;
 	.
@@ -74,7 +79,7 @@ gist:Building
 	.
 
 gist:Category
-	rdfs:subClassOf obo:BFO_0000020 ;
+	rdfs:subClassOf obo:BFO_0000031 ;
 	gist:bfoMappingNote "BFO does not seem to have categories, maybe because everything in BFO is a category."^^xsd:string ;
 	.
 
@@ -96,6 +101,20 @@ gist:Content
 	gist:bfoMappingNote "Content seems to be a proper subset of generically dependent continuant."^^xsd:string ;
 	.
 
+gist:ControlledVocabulary
+	rdfs:subClassOf [
+		a owl:Class ;
+		owl:intersectionOf (
+			obo:BFO_0000031
+			[
+				a owl:Restriction ;
+				owl:onProperty obo:BFO_0000178 ;
+				owl:someValuesFrom obo:BFO_0000031 ;
+			]
+		) ;
+	] ;
+	.
+
 gist:Equipment
 	rdfs:subClassOf obo:BFO_0000030 ;
 	gist:bfoMappingNote "Equipment is clearly a material entity. Initial mapping will map to the object subclass."^^xsd:string ;
@@ -107,48 +126,42 @@ gist:Event
 
 gist:GeoPoint
 	rdfs:subClassOf [
-		owl:unionOf (
-			obo:BFO_0000018
-			obo:BFO_0000147
-		) ;
+		a owl:Restriction ;
+		owl:onProperty obo:BFO_0000210 ;
+		owl:someValuesFrom obo:BFO_0000018 ;
 	] ;
 	.
 
 gist:GeoRegion
 	rdfs:subClassOf [
-		owl:unionOf (
-			obo:BFO_0000009
-			obo:BFO_0000146
-		) ;
+		a owl:Restriction ;
+		owl:onProperty obo:BFO_0000210 ;
+		owl:someValuesFrom obo:BFO_0000009 ;
 	] ;
 	.
 
 gist:GeoRoute
 	rdfs:subClassOf [
-		owl:unionOf (
-			obo:BFO_0000009
-			obo:BFO_0000142
-		) ;
+		a owl:Restriction ;
+		owl:onProperty obo:BFO_0000210 ;
+		owl:someValuesFrom obo:BFO_0000026 ;
 	] ;
 	gist:bfoMappingNote "Routes are collections of one dimensional regions, but they may trace out a 2D path."^^xsd:string ;
 	.
 
 gist:GeoSegment
 	rdfs:subClassOf [
-		owl:unionOf (
-			obo:BFO_0000026
-			obo:BFO_0000142
-		) ;
+		a owl:Restriction ;
+		owl:onProperty obo:BFO_0000210 ;
+		owl:someValuesFrom obo:BFO_0000026 ;
 	] ;
 	.
 
 gist:GeoVolume
 	rdfs:subClassOf [
-		owl:unionOf (
-			obo:BFO_0000028
-			obo:BFO_0000029
-			obo:BFO_0000024
-		) ;
+		a owl:Restriction ;
+		owl:onProperty obo:BFO_0000210 ;
+		owl:someValuesFrom obo:BFO_0000028 ;
 	] ;
 	.
 
@@ -158,7 +171,8 @@ gist:IntellectualProperty
 	.
 
 gist:Intention
-	rdfs:subClassOf obo:BFO_0000002 ;
+	rdfs:subClassOf obo:BFO_0000020 ;
+	gist:bfoMappingNote "It is to be determined whether this only holds for mental entities or it can work for, say, BFO:function"^^xsd:string ;
 	.
 
 gist:Language
@@ -208,12 +222,24 @@ gist:PhysicalSubstance
 	gist:bfoMappingNote "Physical substance is a material entity, but not an object or aggregate as those are physical identifiable items and collections."^^xsd:string ;
 	.
 
+gist:Place
+	rdfs:subClassOf obo:BFO_0000029 ;
+	.
+
 gist:SchemaMetaData
 	rdfs:subClassOf obo:BFO_0000031 ;
 	.
 
 gist:Specification
-	rdfs:subClassOf obo:BFO_0000031 ;
+	rdfs:subClassOf
+		obo:BFO_0000031 ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :gist_taxonomy_subclass_of ;
+			owl:allValuesFrom gist:Intention ;
+		]
+		;
+	gist:bfoMappingNote "Likely a CCO directive information content entity"^^xsd:string ;
 	.
 
 gist:System
@@ -242,5 +268,14 @@ gist:bfoMappingNote
 	rdfs:subPropertyOf skos:editorialNote ;
 	skos:definition "Information regarding the mapping between gist and BFO ontologies, how a resource was mapped, or clarifcations on the mapping."^^xsd:string ;
 	skos:prefLabel "BFO mapping note"^^xsd:string ;
+	.
+
+:gist_taxonomy_subclass_of
+	a
+		owl:ObjectProperty ,
+		owl:ReflexiveProperty ,
+		owl:TransitiveProperty
+		;
+	rdfs:label "gist taxonomy subclass of"^^xsd:string ;
 	.
 
