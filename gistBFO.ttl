@@ -7,7 +7,7 @@
 @prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@base <https://w3id.org/semanticarts/ontology/gistBFO> .
+@base <https://w3id.org/semanticarts/ontology/gistBFO#> .
 
 <https://w3id.org/semanticarts/ontology/gistBFO> rdf:type owl:Ontology ;
                                                   owl:versionIRI <https://w3id.org/semanticarts/ontology/gistBFO0.1.0> ;
@@ -142,24 +142,18 @@ gist:Event rdfs:subClassOf obo:BFO_0000003 .
 
 
 ###  https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint
-gist:GeoPoint rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                owl:onProperty obo:BFO_0000210 ;
-                                owl:someValuesFrom obo:BFO_0000018
-                              ] .
-
-
-###  https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion
-gist:GeoRegion rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty obo:BFO_0000210 ;
-                                 owl:someValuesFrom obo:BFO_0000009
-                               ] .
+gist:GeoPoint owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000147
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty obo:BFO_0000210 ;
+                                                           owl:someValuesFrom obo:BFO_0000018
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] .
 
 
 ###  https://w3id.org/semanticarts/ns/ontology/gist/GeoRoute
-gist:GeoRoute rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                owl:onProperty obo:BFO_0000210 ;
-                                owl:someValuesFrom obo:BFO_0000026
-                              ] ;
+gist:GeoRoute rdfs:subClassOf obo:BFO_0000142 ;
               gist:bfoMappingNote "Routes are collections of one dimensional regions, but they may trace out a 2D path." .
 
 
