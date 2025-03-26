@@ -24,6 +24,38 @@
 	gist:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
 	.
 
+obo:BFO_0000057
+	rdfs:subPropertyOf gist:hasParticipant ;
+	.
+
+obo:BFO_0000063
+	rdfs:subPropertyOf gist:precedes ;
+	.
+
+obo:BFO_0000066
+	rdfs:subPropertyOf gist:occursIn ;
+	.
+
+obo:BFO_0000084
+	rdfs:subPropertyOf gist:isBasedOn ;
+	.
+
+obo:BFO_0000129
+	rdfs:subPropertyOf gist:isMemberOf ;
+	.
+
+obo:BFO_0000132
+	rdfs:subPropertyOf gist:isPartOf ;
+	.
+
+obo:BFO_0000176
+	rdfs:subPropertyOf gist:isPartOf ;
+	.
+
+obo:BFO_0000194
+	rdfs:subPropertyOf gist:isCategorizedBy ;
+	.
+
 gist:Agreement
 	rdfs:subClassOf obo:BFO_0000145 ;
 	.
