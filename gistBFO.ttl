@@ -24,54 +24,6 @@
 	gist:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
 	.
 
-obo:BFO_0000057
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf gist:hasParticipant ;
-	.
-
-obo:BFO_0000063
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf gist:precedes ;
-	.
-
-obo:BFO_0000066
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf gist:occursIn ;
-	.
-
-obo:BFO_0000084
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf gist:isBasedOn ;
-	.
-
-obo:BFO_0000129
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf gist:isMemberOf ;
-	.
-
-obo:BFO_0000132
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf gist:isPartOf ;
-	.
-
-obo:BFO_0000176
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf gist:isPartOf ;
-	.
-
-obo:BFO_0000194
-	a owl:AnnotationProperty ;
-	rdfs:subPropertyOf gist:isCategorizedBy ;
-	.
-
-skos:bfoMappingNote
-	a owl:AnnotationProperty ;
-	.
-
-skos:editorialNote
-	a owl:AnnotationProperty ;
-	.
-
 gist:Agreement
 	rdfs:subClassOf obo:BFO_0000145 ;
 	.
@@ -202,7 +154,7 @@ gist:Organization
 
 gist:PhysicalIdentifiableItem
 	rdfs:subClassOf obo:BFO_0000004 ;
-	skos:bfoMappingNote "A physical identifiable item is a independent continuant that is not a spatial region."^^xsd:string ;
+	gist:bfoMappingNote "A physical identifiable item is a independent continuant that is not a spatial region."^^xsd:string ;
 	.
 
 gist:PhysicalSubstance
@@ -263,33 +215,5 @@ gist:bfoMappingNote
 	rdfs:subPropertyOf skos:editorialNote ;
 	skos:definition "Information regarding the mapping between gist and BFO ontologies, how a resource was mapped, or clarifcations on the mapping."^^xsd:string ;
 	skos:prefLabel "BFO mapping note"^^xsd:string ;
-	.
-
-gist:hasParticipant
-	a owl:AnnotationProperty ;
-	.
-
-gist:isBasedOn
-	a owl:AnnotationProperty ;
-	.
-
-gist:isCategorizedBy
-	a owl:AnnotationProperty ;
-	.
-
-gist:isMemberOf
-	a owl:AnnotationProperty ;
-	.
-
-gist:isPartOf
-	a owl:AnnotationProperty ;
-	.
-
-gist:occursIn
-	a owl:AnnotationProperty ;
-	.
-
-gist:precedes
-	a owl:AnnotationProperty ;
 	.
 
