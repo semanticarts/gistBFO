@@ -143,7 +143,13 @@ gist:IntellectualProperty
 	.
 
 gist:Intention
-	rdfs:subClassOf obo:BFO_0000020 ;
+	rdfs:subClassOf [
+		a owl:Class ;
+		owl:unionOf (
+			obo:BFO_0000020
+			obo:BFO_0000031
+		) ;
+	] ;
 	gist:bfoMappingNote "It is to be determined whether this only holds for mental entities or it can work for, say, BFO:function"^^xsd:string ;
 	.
 
@@ -210,13 +216,7 @@ gist:SchemaMetaData
 	.
 
 gist:Specification
-	rdfs:subClassOf [
-		a owl:Class ;
-		owl:unionOf (
-			obo:BFO_0000020
-			obo:BFO_0000031
-		) ;
-	] ;
+	rdfs:subClassOf obo:BFO_0000031 ;
 	gist:bfoMappingNote "Likely a CCO directive information content entity"^^xsd:string ;
 	.
 
