@@ -802,23 +802,6 @@ gist:GeoRoute
 gist:GeoSegment
 	a owl:Class ;
 	rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
-	owl:equivalentClass [
-		a owl:Class ;
-		owl:intersectionOf (
-			[
-				a owl:Restriction ;
-				owl:onProperty gist:comesFromPlace ;
-				owl:onClass gist:GeoPoint ;
-				owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-			]
-			[
-				a owl:Restriction ;
-				owl:onProperty gist:goesToPlace ;
-				owl:onClass gist:GeoPoint ;
-				owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-			]
-		) ;
-	] ;
 	skos:definition "A single portion of a GeoRegion which has been divided (i.e., segmented)."^^xsd:string ;
 	skos:prefLabel "Geo Segment"^^xsd:string ;
 	.

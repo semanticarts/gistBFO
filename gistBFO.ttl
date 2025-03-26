@@ -155,11 +155,14 @@ gist:GeoRoute
 	.
 
 gist:GeoSegment
-	rdfs:subClassOf [
-		a owl:Restriction ;
-		owl:onProperty :gist_taxonomy_subclass_of ;
-		owl:allValuesFrom gist:Place ;
-	] ;
+	rdfs:subClassOf
+		obo:BFO_0000142 ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :gist_taxonomy_subclass_of ;
+			owl:allValuesFrom gist:Place ;
+		]
+		;
 	.
 
 gist:GeoVolume
@@ -265,7 +268,8 @@ gist:TimeInterval
 	.
 
 gist:UnitOfMeasure
-	gist:bfoMappingNote "Unclear if unit of measure fits in BFO. To avoid potentially inconsistent ontologies, it is initially not mapped to BFO."^^xsd:string ;
+	rdfs:subClassOf obo:BFO_0000031 ;
+	gist:bfoMappingNote "Mapped under GDC, following CCO"^^xsd:string ;
 	.
 
 gist:bfoMappingNote
