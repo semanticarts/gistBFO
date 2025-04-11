@@ -1,0 +1,7 @@
+*.~vsd*
+*_webDownload/
+.DS_Store
+*.orig
+**/*venv
+catalog-v001.xml
+
