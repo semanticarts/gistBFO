@@ -1,4 +1,4 @@
-# imports: http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl
+# imports: http://purl.obolibrary.org/obo/bfo/2020/bfo-import.ttl
 # imports: https://w3id.org/semanticarts/ontology/gistCore13.0.0
 
 @prefix : <https://w3id.org/semanticarts/ontology/gistBFO#> .
@@ -14,7 +14,7 @@
 <https://w3id.org/semanticarts/ontology/gistBFO>
 	a owl:Ontology ;
 	owl:imports
-		<http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl> ,
+		<http://purl.obolibrary.org/obo/bfo/2020/bfo-import.ttl> ,
 		<https://w3id.org/semanticarts/ontology/gistCore13.0.0>
 		;
 	owl:versionIRI <https://w3id.org/semanticarts/ontology/gistBFO0.1.0> ;
