@@ -1,0 +1,290 @@
+# imports: http://purl.obolibrary.org/obo/bfo/2020/bfo-import.ttl
+# imports: https://w3id.org/semanticarts/ontology/gistCore13.0.0
+
+@prefix : <https://w3id.org/semanticarts/ontology/gistBFO#> .
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/semanticarts/ontology/gistBFO-non-conservative>
+	a owl:Ontology ;
+	owl:imports
+		<http://purl.obolibrary.org/obo/bfo/2020/bfo-import.ttl> ,
+		<https://w3id.org/semanticarts/ontology/gistCore13.0.0>
+		;
+	owl:versionIRI <https://w3id.org/semanticarts/ontology/gistBFO-non-conservativeX.x.x> ;
+	skos:definition "A set of axioms to align gist and BFO."^^xsd:string ;
+	skos:prefLabel "gistBFO"^^xsd:string ;
+	skos:scopeNote "This ontology contains rdfs:subClassOf and rdfs:subPropertyOf assertions to create a bridge between gist and the Basic Formal Ontology (BFO). High-level gist classes are mapped to their most specific superclass in BFO. BFO properties are mapped to core properties in gist."^^xsd:string ;
+	gist:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+	.
+
+obo:BFO_0000057
+	rdfs:subPropertyOf gist:hasParticipant ;
+	.
+
+obo:BFO_0000063
+	rdfs:subPropertyOf gist:precedes ;
+	.
+
+obo:BFO_0000066
+	rdfs:subPropertyOf gist:occursIn ;
+	.
+
+obo:BFO_0000084
+	rdfs:subPropertyOf gist:isBasedOn ;
+	.
+
+obo:BFO_0000129
+	rdfs:subPropertyOf gist:isMemberOf ;
+	.
+
+obo:BFO_0000132
+	rdfs:subPropertyOf gist:isPartOf ;
+	.
+
+obo:BFO_0000176
+	rdfs:subPropertyOf gist:isPartOf ;
+	.
+
+obo:BFO_0000194
+	rdfs:subPropertyOf gist:isCategorizedBy ;
+	.
+
+skos:bfoMappingNote
+	a owl:AnnotationProperty ;
+	.
+
+skos:editorialNote
+	a owl:AnnotationProperty ;
+	.
+
+gist:Agreement
+	rdfs:subClassOf obo:BFO_0000145 ;
+	.
+
+gist:Aspect
+	rdfs:subClassOf obo:BFO_0000034 ;
+	gist:bfoMappingNote "Function in BFO covers a lot of ground, but it could cover our aspects which are specific to measurements."^^xsd:string ;
+	.
+
+gist:Building
+	rdfs:subClassOf
+		obo:BFO_0000030 ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :gist_taxonomy_subclass_of ;
+			owl:allValuesFrom gist:Landmark ;
+		]
+		;
+	gist:bfoMappingNote "Building is clearly a material entity. Initial mapping will map to the objects subclass."^^xsd:string ;
+	.
+
+gist:Category
+	rdfs:subClassOf obo:BFO_0000031 ;
+	gist:bfoMappingNote "BFO does not seem to have categories, maybe because everything in BFO is a category."^^xsd:string ;
+	.
+
+gist:Collection
+	rdfs:subClassOf obo:BFO_0000002 ;
+	gist:bfoMappingNote "Because gist collections could be anything and BFO 'object aggregate' is for physical items, collection maps to a superclass."^^xsd:string ;
+	.
+
+gist:Commitment
+	rdfs:subClassOf obo:BFO_0000002 ;
+	.
+
+gist:Component
+	rdfs:subClassOf obo:BFO_0000030 ;
+	.
+
+gist:Content
+	rdfs:subClassOf obo:BFO_0000031 ;
+	gist:bfoMappingNote "Content seems to be a proper subset of generically dependent continuant."^^xsd:string ;
+	.
+
+gist:ControlledVocabulary
+	rdfs:subClassOf [
+		a owl:Class ;
+		owl:intersectionOf (
+			obo:BFO_0000031
+			[
+				a owl:Restriction ;
+				owl:onProperty obo:BFO_0000178 ;
+				owl:someValuesFrom obo:BFO_0000031 ;
+			]
+		) ;
+	] ;
+	.
+
+gist:Equipment
+	rdfs:subClassOf obo:BFO_0000030 ;
+	gist:bfoMappingNote "Equipment is clearly a material entity. Initial mapping will map to the object subclass."^^xsd:string ;
+	.
+
+gist:Event
+	rdfs:subClassOf obo:BFO_0000003 ;
+	.
+
+gist:GeoPoint
+	rdfs:subClassOf
+		obo:BFO_0000147 ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :gist_taxonomy_subclass_of ;
+			owl:allValuesFrom gist:Place ;
+		]
+		;
+	.
+
+gist:GeoRoute
+	rdfs:subClassOf
+		obo:BFO_0000142 ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :gist_taxonomy_subclass_of ;
+			owl:allValuesFrom gist:Place ;
+		]
+		;
+	gist:bfoMappingNote "Routes are collections of one dimensional regions, but they may trace out a 2D path."^^xsd:string ;
+	.
+
+gist:GeoSegment
+	rdfs:subClassOf
+		obo:BFO_0000142 ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :gist_taxonomy_subclass_of ;
+			owl:allValuesFrom gist:Place ;
+		]
+		;
+	.
+
+gist:GeoVolume
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty obo:BFO_0000210 ;
+		owl:someValuesFrom obo:BFO_0000028 ;
+	] ;
+	.
+
+gist:IntellectualProperty
+	rdfs:subClassOf obo:BFO_0000002 ;
+	gist:bfoMappingNote "Intellectual property includes both immaterial knowledge and physically represented knowledge."^^xsd:string ;
+	.
+
+gist:Intention
+	rdfs:subClassOf obo:BFO_0000020 ;
+	gist:bfoMappingNote "It is to be determined whether this only holds for mental entities or it can work for, say, BFO:function"^^xsd:string ;
+	.
+
+gist:Language
+	rdfs:subClassOf obo:BFO_0000031 ;
+	gist:bfoMappingNote "Language fits the pattern of being continuant because it persists through change, but doesn't have an independent nature."^^xsd:string ;
+	.
+
+gist:Magnitude
+	rdfs:subClassOf obo:BFO_0000019 ;
+	.
+
+gist:Network
+	rdfs:subClassOf obo:BFO_0000027 ;
+	.
+
+gist:NetworkLink
+	rdfs:subClassOf obo:BFO_0000024 ;
+	gist:bfoMappingNote "Fiat object part is a pretty good cover for network link."^^xsd:string ;
+	.
+
+gist:NetworkNode
+	rdfs:subClassOf obo:BFO_0000024 ;
+	gist:bfoMappingNote "Network node also fits the fiat object part as the node could be virtual or instantiated."^^xsd:string ;
+	.
+
+gist:Obligation
+	rdfs:subClassOf obo:BFO_0000145 ;
+	.
+
+gist:OrderedMember
+	rdfs:subClassOf obo:BFO_0000023 ;
+	gist:bfoMappingNote "The ordered member defines the role the proxied real world item plays in the ordered collection."^^xsd:string ;
+	.
+
+gist:Organization
+	rdfs:subClassOf obo:BFO_0000027 ;
+	gist:bfoMappingNote "Organization is clearly an independent continuant and immaterial. May need to update to be consistent with Common Core Ontology as well."^^xsd:string ;
+	.
+
+gist:PhysicalIdentifiableItem
+	rdfs:subClassOf obo:BFO_0000004 ;
+	skos:bfoMappingNote "A physical identifiable item is a independent continuant that is not a spatial region."^^xsd:string ;
+	.
+
+gist:PhysicalSubstance
+	rdfs:subClassOf obo:BFO_0000040 ;
+	gist:bfoMappingNote "Physical substance is a material entity, but not an object or aggregate as those are physical identifiable items and collections."^^xsd:string ;
+	.
+
+gist:Place
+	rdfs:subClassOf obo:BFO_0000029 ;
+	.
+
+gist:SchemaMetaData
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+gist:Specification
+	rdfs:subClassOf
+		obo:BFO_0000031 ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :gist_taxonomy_subclass_of ;
+			owl:allValuesFrom gist:Intention ;
+		]
+		;
+	gist:bfoMappingNote "Likely a CCO directive information content entity"^^xsd:string ;
+	.
+
+gist:System
+	rdfs:subClassOf obo:BFO_0000027 ;
+	.
+
+gist:Template
+	rdfs:subClassOf obo:BFO_0000031 ;
+	.
+
+gist:TemporalRelation
+	rdfs:subClassOf obo:BFO_0000145 ;
+	gist:bfoMappingNote "Other potential matches include role and occurrent."^^xsd:string ;
+	.
+
+gist:TimeInterval
+	rdfs:subClassOf obo:BFO_0000038 ;
+	.
+
+gist:UnitOfMeasure
+	rdfs:subClassOf obo:BFO_0000031 ;
+	gist:bfoMappingNote "Mapped under GDC, following CCO"^^xsd:string ;
+	.
+
+gist:bfoMappingNote
+	a owl:AnnotationProperty ;
+	rdfs:subPropertyOf skos:editorialNote ;
+	skos:definition "Information regarding the mapping between gist and BFO ontologies, how a resource was mapped, or clarifcations on the mapping."^^xsd:string ;
+	skos:prefLabel "BFO mapping note"^^xsd:string ;
+	.
+
+:gist_taxonomy_subclass_of
+	a
+		owl:ObjectProperty ,
+		owl:ReflexiveProperty ,
+		owl:TransitiveProperty
+		;
+	rdfs:label "gist taxonomy subclass of"^^xsd:string ;
+	.
+
