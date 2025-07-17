@@ -67,12 +67,12 @@ gist:Aspect
 
 gist:Building
 	rdfs:subClassOf obo:BFO_0000030 ;
-	gist:bfoMappingNote "Building is clearly a material entity. Initial mapping will map to the objects subclass."^^xsd:string ;
+	gist:bfoMappingNote "Building is clearly a material entity. Initial mapping will map to the bfo:object subclass."^^xsd:string ;
 	.
 
 gist:Category
 	rdfs:subClassOf obo:BFO_0000031 ;
-	gist:bfoMappingNote "BFO does not seem to have categories, maybe because everything in BFO is a category."^^xsd:string ;
+	gist:bfoMappingNote "Similar to information content entities in CCO, which fall under bfo:GDC. bfo:SDC was another candidate, but SDCs are particular qualities of things (e.g., the particular redness of a car), while instances of gist:Category are typically understood to be buckets that things fall into."^^xsd:string ;
 	.
 
 gist:Collection
@@ -113,7 +113,14 @@ gist:Equipment
 	.
 
 gist:Event
-	rdfs:subClassOf obo:BFO_0000003 ;
+	rdfs:subClassOf [
+		a owl:Class ;
+		owl:unionOf (
+			obo:BFO_0000031
+			obo:BFO_0000015
+		) ;
+	] ;
+	gist:bfoMappingNote "Instances of gist:ScheduledEvent are generically dependent continuants, while events that have actually occurred (or are currently underway) are processes."^^xsd:string ;
 	.
 
 gist:GeoPoint
@@ -150,7 +157,7 @@ gist:Intention
 			obo:BFO_0000031
 		) ;
 	] ;
-	gist:bfoMappingNote "It is to be determined whether this only holds for mental entities or it can work for, say, BFO:function"^^xsd:string ;
+	gist:bfoMappingNote "Instances of gist:Intention are sometimes specifically dependent continuants (like instances of gist:Function) and sometimes generically dependent continuants (like instances of gist:Specification)."^^xsd:string ;
 	.
 
 gist:Language
@@ -187,7 +194,7 @@ gist:OrderedMember
 
 gist:Organization
 	rdfs:subClassOf obo:BFO_0000027 ;
-	gist:bfoMappingNote "Organization is clearly an independent continuant and immaterial. May need to update to be consistent with Common Core Ontology as well."^^xsd:string ;
+	gist:bfoMappingNote "Opted for bfo:objectaggregate, partly to remain consistent with CCO."^^xsd:string ;
 	.
 
 gist:PhysicalIdentifiableItem
@@ -217,7 +224,7 @@ gist:SchemaMetaData
 
 gist:Specification
 	rdfs:subClassOf obo:BFO_0000031 ;
-	gist:bfoMappingNote "Likely a CCO directive information content entity"^^xsd:string ;
+	gist:bfoMappingNote "Likely a CCO directive information content entity."^^xsd:string ;
 	.
 
 gist:System
@@ -239,7 +246,7 @@ gist:TimeInterval
 
 gist:UnitOfMeasure
 	rdfs:subClassOf obo:BFO_0000031 ;
-	gist:bfoMappingNote "Mapped under GDC, following CCO"^^xsd:string ;
+	gist:bfoMappingNote "Mapped under GDC, following CCO."^^xsd:string ;
 	.
 
 gist:bfoMappingNote

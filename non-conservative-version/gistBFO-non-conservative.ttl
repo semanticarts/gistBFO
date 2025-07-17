@@ -1,4 +1,4 @@
-# imports: http://purl.obolibrary.org/obo/bfo/2020/bfo-import.ttl
+# imports: https://w3id.org/semanticarts/ontology/gistBFO-non-conservative-bfoX.x.x
 # imports: https://w3id.org/semanticarts/ontology/gistCore13.0.0
 
 @prefix : <https://w3id.org/semanticarts/ontology/gistBFO#> .
@@ -14,7 +14,7 @@
 <https://w3id.org/semanticarts/ontology/gistBFO-non-conservative>
 	a owl:Ontology ;
 	owl:imports
-		<http://purl.obolibrary.org/obo/bfo/2020/bfo-import.ttl> ,
+		<https://w3id.org/semanticarts/ontology/gistBFO-non-conservative-bfoX.x.x> ,
 		<https://w3id.org/semanticarts/ontology/gistCore13.0.0>
 		;
 	owl:versionIRI <https://w3id.org/semanticarts/ontology/gistBFO-non-conservativeX.x.x> ;
@@ -78,16 +78,16 @@ gist:Building
 		obo:BFO_0000030 ,
 		[
 			a owl:Restriction ;
-			owl:onProperty :gist_taxonomy_subclass_of ;
+			owl:onProperty gist:gistTaxonomySubClassOf ;
 			owl:allValuesFrom gist:Landmark ;
 		]
 		;
-	gist:bfoMappingNote "Building is clearly a material entity. Initial mapping will map to the objects subclass."^^xsd:string ;
+	gist:bfoMappingNote "Building is clearly a material entity. Initial mapping will map to the bfo:object subclass."^^xsd:string ;
 	.
 
 gist:Category
 	rdfs:subClassOf obo:BFO_0000031 ;
-	gist:bfoMappingNote "BFO does not seem to have categories, maybe because everything in BFO is a category."^^xsd:string ;
+	gist:bfoMappingNote "Similar to information content entities in CCO, which fall under bfo:GDC. bfo:SDC was another candidate, but SDCs are particular qualities of things (e.g., the particular redness of a car), while instances of gist:Category are typically understood to be buckets that things fall into."^^xsd:string ;
 	.
 
 gist:Collection
@@ -124,11 +124,18 @@ gist:ControlledVocabulary
 
 gist:Equipment
 	rdfs:subClassOf obo:BFO_0000030 ;
-	gist:bfoMappingNote "Equipment is clearly a material entity. Initial mapping will map to the object subclass."^^xsd:string ;
+	gist:bfoMappingNote "Equipment is clearly a material entity. Initial mapping will map to the bfo:object subclass."^^xsd:string ;
 	.
 
 gist:Event
-	rdfs:subClassOf obo:BFO_0000003 ;
+	rdfs:subClassOf [
+		a owl:Class ;
+		owl:unionOf (
+			obo:BFO_0000031
+			obo:BFO_0000015
+		) ;
+	] ;
+	gist:bfoMappingNote "Instances of gist:ScheduledEvent are generically dependent continuants, while events that have actually occurred (or are currently underway) are processes."^^xsd:string ;
 	.
 
 gist:GeoPoint
@@ -136,7 +143,7 @@ gist:GeoPoint
 		obo:BFO_0000147 ,
 		[
 			a owl:Restriction ;
-			owl:onProperty :gist_taxonomy_subclass_of ;
+			owl:onProperty gist:gistTaxonomySubClassOf ;
 			owl:allValuesFrom gist:Place ;
 		]
 		;
@@ -147,7 +154,7 @@ gist:GeoRoute
 		obo:BFO_0000142 ,
 		[
 			a owl:Restriction ;
-			owl:onProperty :gist_taxonomy_subclass_of ;
+			owl:onProperty gist:gistTaxonomySubClassOf ;
 			owl:allValuesFrom gist:Place ;
 		]
 		;
@@ -159,7 +166,7 @@ gist:GeoSegment
 		obo:BFO_0000142 ,
 		[
 			a owl:Restriction ;
-			owl:onProperty :gist_taxonomy_subclass_of ;
+			owl:onProperty gist:gistTaxonomySubClassOf ;
 			owl:allValuesFrom gist:Place ;
 		]
 		;
@@ -180,7 +187,6 @@ gist:IntellectualProperty
 
 gist:Intention
 	rdfs:subClassOf obo:BFO_0000020 ;
-	gist:bfoMappingNote "It is to be determined whether this only holds for mental entities or it can work for, say, BFO:function"^^xsd:string ;
 	.
 
 gist:Language
@@ -217,7 +223,7 @@ gist:OrderedMember
 
 gist:Organization
 	rdfs:subClassOf obo:BFO_0000027 ;
-	gist:bfoMappingNote "Organization is clearly an independent continuant and immaterial. May need to update to be consistent with Common Core Ontology as well."^^xsd:string ;
+	gist:bfoMappingNote "Opted for bfo:objectaggregate, partly to remain consistent with CCO."^^xsd:string ;
 	.
 
 gist:PhysicalIdentifiableItem
@@ -243,11 +249,11 @@ gist:Specification
 		obo:BFO_0000031 ,
 		[
 			a owl:Restriction ;
-			owl:onProperty :gist_taxonomy_subclass_of ;
+			owl:onProperty gist:gistTaxonomySubClassOf ;
 			owl:allValuesFrom gist:Intention ;
 		]
 		;
-	gist:bfoMappingNote "Likely a CCO directive information content entity"^^xsd:string ;
+	gist:bfoMappingNote "Likely a CCO directive information content entity."^^xsd:string ;
 	.
 
 gist:System
@@ -279,12 +285,13 @@ gist:bfoMappingNote
 	skos:prefLabel "BFO mapping note"^^xsd:string ;
 	.
 
-:gist_taxonomy_subclass_of
+gist:gistTaxonomySubClassOf
 	a
 		owl:ObjectProperty ,
 		owl:ReflexiveProperty ,
 		owl:TransitiveProperty
 		;
 	rdfs:label "gist taxonomy subclass of"^^xsd:string ;
+	skos:definition "A property used to preserve the hierarchy"^^xsd:string ;
 	.
 
