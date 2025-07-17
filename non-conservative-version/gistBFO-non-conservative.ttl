@@ -292,6 +292,6 @@ gist:gistTaxonomySubClassOf
 		owl:TransitiveProperty
 		;
 	rdfs:label "gist taxonomy subclass of"^^xsd:string ;
-	skos:definition "A property used to preserve the hierarchy"^^xsd:string ;
+	skos:definition "A property used to preserve the gist class hierarchy."^^xsd:string ;
 	.
 
