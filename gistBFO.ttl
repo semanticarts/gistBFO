@@ -252,7 +252,7 @@ gist:UnitOfMeasure
 gist:bfoMappingNote
 	a owl:AnnotationProperty ;
 	rdfs:subPropertyOf skos:editorialNote ;
-	skos:definition "Information regarding the mapping between gist and BFO ontologies, how a resource was mapped, or clarifcations on the mapping."^^xsd:string ;
+	skos:definition "Information regarding the mapping between gist and BFO ontologies, how a resource was mapped, or clarifications on the mapping."^^xsd:string ;
 	skos:prefLabel "BFO mapping note"^^xsd:string ;
 	.
 
