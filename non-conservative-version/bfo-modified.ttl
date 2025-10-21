@@ -8,7 +8,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://purl.obolibrary.org/obo/bfo-import.ttl>
+<https://w3id.org/semanticarts/ontology/gistBFO-non-conservative-bfo>
 	a owl:Ontology ;
 	rdfs:comment "The most recent version of this file will always be in the GitHub repository https://github.com/bfo-ontology/bfo-2020"^^xsd:string ;
 	dc11:contributor
@@ -46,7 +46,7 @@
 	dc:description "Basic Formal Ontology implemented in the Web Ontology Language (OWL 2) with direct semantics."@en ;
 	dc:license <https://creativecommons.org/licenses/by/4.0/> ;
 	dc:title "BFO 2020"^^xsd:string ;
-	owl:versionIRI <http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl> ;
+	owl:versionIRI <https://w3id.org/semanticarts/ontology/gistBFO-non-conservative-bfoX.x.x> ;
 	.
 
 <http://purl.obolibrary.org/obo/BFO_0000001>
