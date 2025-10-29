@@ -1,6 +1,7 @@
 # imports: http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl
 # imports: https://w3id.org/semanticarts/ontology/gistCore13.0.0
 
+@prefix : <https://w3id.org/semanticarts/ontology/gistBFO#> .
 @prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
