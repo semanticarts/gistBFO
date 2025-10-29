@@ -208,24 +208,14 @@ gist:PhysicalSubstance
 	.
 
 gist:Place
-	rdfs:subClassOf
-		[
-			a owl:Class ;
-			owl:unionOf (
-				obo:BFO_0000029
-				obo:BFO_0000040
-				obo:BFO_0000140
-			) ;
-		] ,
-		[
-			a owl:Class ;
-			owl:unionOf (
-				obo:BFO_0000029
-				obo:BFO_0000040
-				obo:BFO_0000140
-			) ;
-		]
-		;
+	rdfs:subClassOf [
+		a owl:Class ;
+		owl:unionOf (
+			obo:BFO_0000029
+			obo:BFO_0000040
+			obo:BFO_0000140
+		) ;
+	] ;
 	.
 
 gist:SchemaMetaData
