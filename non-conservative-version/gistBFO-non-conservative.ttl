@@ -1,5 +1,5 @@
 # imports: https://w3id.org/semanticarts/ontology/gistBFO-non-conservative-bfoX.x.x
-# imports: https://w3id.org/semanticarts/ontology/gistCore13.0.0
+# imports: https://w3id.org/semanticarts/ontology/gistCore14.0.0
 
 @prefix : <https://w3id.org/semanticarts/ontology/gistBFO#> .
 @prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
@@ -15,7 +15,7 @@
 	a owl:Ontology ;
 	owl:imports
 		<https://w3id.org/semanticarts/ontology/gistBFO-non-conservative-bfoX.x.x> ,
-		<https://w3id.org/semanticarts/ontology/gistCore13.0.0>
+		<https://w3id.org/semanticarts/ontology/gistCore14.0.0>
 		;
 	owl:versionIRI <https://w3id.org/semanticarts/ontology/gistBFO-non-conservativeX.x.x> ;
 	skos:definition "A set of axioms to align gist and BFO."^^xsd:string ;
@@ -100,7 +100,11 @@ gist:Commitment
 	.
 
 gist:Component
-	rdfs:subClassOf obo:BFO_0000030 ;
+	rdfs:subClassOf obo:BFO_0000002 ;
+	.
+
+gist:Composite
+	rdfs:subClassOf obo:BFO_0000002 ;
 	.
 
 gist:Content
@@ -128,14 +132,21 @@ gist:Equipment
 	.
 
 gist:Event
-	rdfs:subClassOf [
-		a owl:Class ;
-		owl:unionOf (
-			obo:BFO_0000031
-			obo:BFO_0000015
-		) ;
-	] ;
+	rdfs:subClassOf
+		obo:BFO_0000001 ,
+		[
+			a owl:Class ;
+			owl:unionOf (
+				obo:BFO_0000031
+				obo:BFO_0000015
+			) ;
+		]
+		;
 	gist:bfoMappingNote "Instances of gist:ScheduledEvent are generically dependent continuants, while events that have actually occurred (or are currently underway) are processes."^^xsd:string ;
+	.
+
+gist:GeoLocation
+	rdfs:subClassOf obo:BFO_0000140 ;
 	.
 
 gist:GeoPoint
@@ -144,7 +155,7 @@ gist:GeoPoint
 		[
 			a owl:Restriction ;
 			owl:onProperty gist:gistTaxonomySubClassOf ;
-			owl:allValuesFrom gist:Place ;
+			owl:allValuesFrom gist:GeoLocation ;
 		]
 		;
 	.
@@ -155,21 +166,10 @@ gist:GeoRoute
 		[
 			a owl:Restriction ;
 			owl:onProperty gist:gistTaxonomySubClassOf ;
-			owl:allValuesFrom gist:Place ;
+			owl:allValuesFrom gist:GeoLocation ;
 		]
 		;
 	gist:bfoMappingNote "Routes are collections of one dimensional regions, but they may trace out a 2D path."^^xsd:string ;
-	.
-
-gist:GeoSegment
-	rdfs:subClassOf
-		obo:BFO_0000142 ,
-		[
-			a owl:Restriction ;
-			owl:onProperty gist:gistTaxonomySubClassOf ;
-			owl:allValuesFrom gist:Place ;
-		]
-		;
 	.
 
 gist:GeoVolume
@@ -198,10 +198,6 @@ gist:Magnitude
 	rdfs:subClassOf obo:BFO_0000019 ;
 	.
 
-gist:Network
-	rdfs:subClassOf obo:BFO_0000027 ;
-	.
-
 gist:NetworkLink
 	rdfs:subClassOf obo:BFO_0000024 ;
 	gist:bfoMappingNote "Fiat object part is a pretty good cover for network link."^^xsd:string ;
@@ -210,15 +206,6 @@ gist:NetworkLink
 gist:NetworkNode
 	rdfs:subClassOf obo:BFO_0000024 ;
 	gist:bfoMappingNote "Network node also fits the fiat object part as the node could be virtual or instantiated."^^xsd:string ;
-	.
-
-gist:Obligation
-	rdfs:subClassOf obo:BFO_0000145 ;
-	.
-
-gist:OrderedMember
-	rdfs:subClassOf obo:BFO_0000023 ;
-	gist:bfoMappingNote "The ordered member defines the role the proxied real world item plays in the ordered collection."^^xsd:string ;
 	.
 
 gist:Organization
@@ -234,10 +221,6 @@ gist:PhysicalIdentifiableItem
 gist:PhysicalSubstance
 	rdfs:subClassOf obo:BFO_0000040 ;
 	gist:bfoMappingNote "Physical substance is a material entity, but not an object or aggregate as those are physical identifiable items and collections."^^xsd:string ;
-	.
-
-gist:Place
-	rdfs:subClassOf obo:BFO_0000029 ;
 	.
 
 gist:SchemaMetaData
